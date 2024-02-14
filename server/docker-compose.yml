@@ -1,0 +1,19 @@
+version: "3.8"
+
+volumes:
+  mysql-data:
+
+services:
+  db:
+    image: mysql:latest
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    # Map to mySqlData inits database and table with correct schema
+    volumes:
+      - mysql-data:/var/lib/mysqlWebApi/data
+      - ./mySqlData/:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: testUser
+      MYSQL_PASSWORD: testPassword      

@@ -1,0 +1,21 @@
+basePath: /api/v1
+consumes:
+- application/json
+host: localhost:5050
+info:
+  contact: {}
+  description: API backend for the Web project
+  title: Web API
+  version: "1.0"
+paths:
+  /:
+    get:
+      description: An page that handles GET without authorization
+      operationId: welcome-landing-page
+      produces:
+      - application/json
+      responses: {}
+      summary: Landing page for web app
+      tags:
+      - mock
+swagger: "2.0"

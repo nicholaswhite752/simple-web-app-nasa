@@ -1,0 +1,30 @@
+{
+    "consumes": [
+        "application/json"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "API backend for the Web project",
+        "title": "Web API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:5050",
+    "basePath": "/api/v1",
+    "paths": {
+        "/": {
+            "get": {
+                "description": "An page that handles GET without authorization",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "mock"
+                ],
+                "summary": "Landing page for web app",
+                "operationId": "welcome-landing-page",
+                "responses": {}
+            }
+        }
+    }
+}
